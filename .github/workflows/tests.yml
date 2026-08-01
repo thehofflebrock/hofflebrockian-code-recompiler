@@ -1,0 +1,29 @@
+name: Toy baseline
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Show Python version
+        run: python3 --version
+      - name: Run the 11 visible baseline tests
+        env:
+          ORDER_QUOTE_MODULE_PATH: toy_trial/legacy/order_quote.py
+        run: python3 -m unittest discover -s toy_trial/visible_tests -p 'test_*.py' -v
+      - name: Compile the Python tools
+        run: >-
+          python3 -m py_compile
+          toy_trial/legacy/order_quote.py
+          toy_trial/builder_stub/order_quote.py
+          toy_trial/tools/prepare_workspaces.py
+          toy_trial/auditor_only/evaluate_candidates.py

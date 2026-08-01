@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.coverage
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+
+# Generated trial workspaces and audit outputs
+toy_trial/runs/
+toy_trial/audit_results.*
+
+# Release artifacts are attached to GitHub releases, not committed to main
+*.docx
+*.zip
