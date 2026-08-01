@@ -1,4 +1,4 @@
-"""Create matched blind and control workspaces for the HCR v0.1 toy trial."""
+"""Create matched sibling workspaces for the HCR v0.1 procedural demonstration."""
 
 from __future__ import annotations
 
@@ -66,6 +66,8 @@ def main() -> int:
     )
     (blind / "WORKSPACE_README.md").write_text(
         "# Blind workspace\n\n"
+        "This sibling directory does not enforce physical source denial. It is for "
+        "procedural rehearsal only and cannot support a source-denial claim.\n\n"
         "Use the package prompt `prompts/05_BUILDER.md`. Do not navigate to parent "
         "or sibling directories. The legacy implementation, repository history, audit "
         "set, evaluator, and control candidate are forbidden.\n",
@@ -75,9 +77,9 @@ def main() -> int:
     print(f"created control workspace: {control}")
     print(f"created blind workspace: {blind}")
     print("Open each directory as a separate workspace in a separate fresh session.")
+    print("WARNING: sibling workspaces are not physical source isolation; demonstration only.")
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -1,4 +1,4 @@
-"""Sealed evaluator for the HCR v0.1 toy order-quote trial.
+"""Legacy-parity evaluator for the HCR v0.1 procedural demonstration.
 
 Keep this file outside both builder workspaces. It compares candidate behavior
 against the legacy substrate over fixed edge cases and seeded randomized cases,
@@ -183,7 +183,7 @@ def benchmark(function, repeats=5, calls=10000):
 
 def markdown_report(report):
     lines = [
-        "# Toy Trial Audit Results",
+        "# Toy Demonstration Results",
         "",
         f"Audit cases per candidate: {report['audit_case_count']}",
         "",
@@ -210,7 +210,10 @@ def markdown_report(report):
             lines.append(json.dumps(samples, indent=2, sort_keys=True))
             lines.append("```")
         lines.append("")
-    lines.append("These measures are audit evidence, not an automatic promotion decision.")
+    lines.append(
+        "These measures confirm package mechanics and legacy parity only. "
+        "They do not validate the method or support a promotion decision."
+    )
     return "\n".join(lines)
 
 

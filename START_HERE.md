@@ -1,12 +1,12 @@
 # Hofflebrockian Code Recompiler v0.1
 
-An independent trial kit for testing whether source-blind reconstruction can preserve software behavior while reducing total complexity.
+A procedural demonstration of contract-led software reconstruction and source-withholding.
 
-Status: experimental application protocol. This is a testable hypothesis, not a proven replacement for refactoring.
+Status: superseded experimental design. Version 0.1 does not physically enforce source denial, uses the legacy implementation as the toy evaluator's oracle, and does not blind interpretive assessment. No natural-code evidence exists. Use this package only to rehearse the procedure.
 
 ## The shortest path
 
-If you are not a coder, use an AI coding assistant that can open a folder and run terminal commands. Start with the bundled toy trial. Do not begin with live or production software.
+If you are not a coder, use an AI coding assistant that can open a folder and run terminal commands. The bundled toy is a walkthrough, not a validating trial. Do not begin with live or production software.
 
 1. Open this package as a folder in your AI coding tool.
 2. Read `MANUAL.md`, especially the risk gate and source-isolation rules.
@@ -22,14 +22,14 @@ If you are not a coder, use an AI coding assistant that can open a folder and ru
 
    `python toy_trial/auditor_only/evaluate_candidates.py`
 
-The builder session must not have access to `toy_trial/legacy`, `toy_trial/auditor_only`, repository history, or the control candidate. A fresh chat is not sufficient if the old implementation remains in the workspace.
+The intended builder condition excludes `toy_trial/legacy`, `toy_trial/auditor_only`, repository history, and the other candidate. The bundled generator does not enforce that condition: it creates sibling directories under a shared parent. A fresh chat and an instruction not to navigate upward do not constitute physical denial.
 
 ## What is included
 
 - `MANUAL.docx` and `MANUAL.md`: the full independent-use guide.
 - `prompts/`: copy-ready role prompts for a fast pass, the six-role protocol, a conventional-refactor control, and final adjudication.
 - `templates/`: trial manifest, protection register, diagnostic map, reconstruction packet, architect handoff, build record, audit report, and result summary.
-- `toy_trial/`: a dependency-free Python module, visible tests, sealed audit evaluator, and workspace-preparation tool.
+- `toy_trial/`: a dependency-free Python module, visible tests, legacy-parity evaluator, and sibling-workspace generator.
 
 ## Non-negotiable limits
 
@@ -39,6 +39,6 @@ The builder session must not have access to `toy_trial/legacy`, `toy_trial/audit
 - Do not deploy a candidate merely because visible tests pass.
 - If the contract was incomplete, repair the contract, erase the failed blind candidate, and derive it again in a fresh builder context.
 
-## Primary hypothesis
+## Original hypothesis
 
-The trial supports the method only if the blind candidate preserves behavior on evidence withheld from the builder while reducing total complexity without moving that complexity into new dependencies, wrappers, configuration, or corrective patches.
+Version 0.1 was intended to test whether a source-denied candidate could preserve behavior while reducing total complexity without moving that complexity into new dependencies, wrappers, configuration, or corrective patches. The current package cannot support that inference.

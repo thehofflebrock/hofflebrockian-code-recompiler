@@ -1,15 +1,25 @@
 ---
 title: "Hofflebrockian Code Recompiler v0.1"
-subtitle: "Independent Trial Kit for Source-Blind Software Reconstruction"
+subtitle: "Superseded Procedural Demonstration"
 author: "J. Nicholas"
 date: "1 August 2026"
 ---
 
 # Read this first
 
-The Hofflebrockian Code Recompiler tests a narrow proposition: an inherited implementation can be withheld from a builder after its required behavior has been characterized and compressed, allowing the software to be rederived from local requirements rather than edited around accumulated compromises.
+The Hofflebrockian Code Recompiler v0.1 was built to test a narrow proposition: an inherited implementation can be withheld from a builder after its required behavior has been characterized and compressed, allowing the software to be rederived from local requirements rather than edited around accumulated compromises.
 
-> **Status:** Experimental application protocol. It is not yet a canonical rule of the Hofflebrockian language, proof of general superiority, or permission to replace production code.
+> **Status: superseded experimental design.** Version 0.1 does not support a reportable claim about source-blind reconstruction. No natural-code trial has yet produced evidence for or against the hypothesis. This manual is retained as a procedural demonstration and design record, not as a validated experiment or permission to replace production code.
+
+The decisive defects are:
+
+- The bundled tool creates sibling workspaces but does not physically deny an agent access to the legacy source or history.
+- The toy evaluator derives expected outputs from the legacy implementation, so it measures legacy parity rather than independent contract correctness.
+- The Auditor sees candidate identity before assigning interpretive scores.
+- Both builders receive the reconstruction packet. The comparison varies legacy-source access inside contract-led reconstruction; it does not compare reconstruction with conventional refactoring.
+- The toy code and its deliberate sediment were authored with the hypothesis. The toy demonstrates package mechanics only.
+
+Treat every later claim of blindness, validation, or experimental support in this v0.1 record as superseded by this notice.
 
 The method is not `delete -> guess -> patch until tests pass`. Its governed cycle is:
 
@@ -17,7 +27,7 @@ The method is not `delete -> guess -> patch until tests pass`. Its governed cycl
 
 The package lets another person run that cycle without J. Nicholas present. It contains copy-ready prompts, handoff records, an A/B protocol, a scoring rule, and a disposable toy codebase.
 
-## The claim being tested
+## The original claim, not established by v0.1
 
 The primary hypothesis is:
 
@@ -25,13 +35,15 @@ The primary hypothesis is:
 
 The null hypothesis is that source-blind reconstruction performs no better, performs worse, or only appears simpler because it loses behavior or moves complexity elsewhere.
 
-The hypothesis is supported for one trial only when all three conditions hold:
+The original decision rule proposed support for one trial only when all three conditions held:
 
 1. The blind candidate achieves semantic parity on the sealed audit set and repository integration checks.
 2. It introduces no new security, performance, compatibility, side-effect, or operational regression.
 3. It reduces total complexity or corrective burden relative to both the legacy implementation and the conventional-refactor control.
 
 One success does not establish generality. One failure must be routed before interpretation: the missing fact may belong to the contract, architecture, implementation, test instrument, or the legacy system itself.
+
+Because the v0.1 isolation, oracle, and assessment instruments are invalid for that inference, satisfying this rule does not establish support.
 
 ## What the method does not claim
 
@@ -91,6 +103,8 @@ If any answer is no, retain the target and choose another seam. Better documenta
 # Structural source blindness
 
 A fresh conversation does not create source blindness when the model can still open the original file, repository history, hidden tests, or another candidate. Isolation must be structural.
+
+**The bundled v0.1 tooling does not meet this requirement.** It creates sibling directories under one package root and relies on an instruction not to navigate upward. Use it only to rehearse the procedure. Do not report a run made with it as physically source-denied.
 
 | Role | Legacy | History | Visible tests | Audit | Packet | Candidate |
 |---|---:|---:|---:|---:|---:|---:|
@@ -225,15 +239,15 @@ The toy trial is a dependency-free Python order-shipping calculator with deliber
 
 9. Complete `templates/07_AUDIT_REPORT.md` and `templates/08_RESULT_SUMMARY.md`.
 
-The fast path tests the central source-withholding mechanism. It does not supply the same role independence as six fresh evidence sessions.
+The fast path rehearses the intended source-withholding mechanism. It neither enforces physical denial nor supplies the same role independence as six fresh evidence sessions, and it cannot produce evidence for the hypothesis.
 
 ## Rigorous path
 
 Use prompts 01 through 04 in separate sessions before preparing the two builder workspaces. Each role receives only the previous role's permitted handoff. Do not let the Translator or Architect reopen the legacy source. Then run the control, blind builder, and auditor as above.
 
-# Run a trial on your own code
+# Historical natural-code protocol
 
-Complete the toy trial first. Then choose one low-risk module with the responsible code owner's participation.
+The following section records the original design. Do not use v0.1 to publish a source-denied comparison. A future protocol must first correct physical isolation, separate legacy parity from independently authoritative conformance, and blind interpretive assessment.
 
 1. Precommit the target, time or turn budget, model/tool version, allowed dependencies, visible test set, sealed audit set, metrics, and stop conditions.
 2. Run the existing baseline and save the exact result before any modification.
@@ -330,7 +344,9 @@ Use when unexplained behavior, weak evidence, integration cost, or risk makes re
 
 Use when the baseline, isolation, target choice, audit instrument, or comparison conditions were invalid. Do not score an invalid experiment as a method failure or success.
 
-# Reporting an independent result
+# Recording a v0.1 run
+
+Do not report a v0.1 run as evidence for or against source-blind reconstruction. It may be shared as a procedural rehearsal or as evidence about defects in the protocol itself.
 
 Publish or share:
 
@@ -366,8 +382,6 @@ This protocol is an application of the Hofflebrockian Language Specification v2.
 - explicit custody;
 - stripping borrowed referents and rederiving from local requirements.
 
-The protocol also carries the Curranical distinctions among source, inference, intervention, accepted development, unknown/conflict, delivery states, provenance moves, and evidence-backed shipping.
-
 The six-role code chain and structural source-withholding rule are experimental developments for this application. They should be revised from completed trials, failed transfer, and independent use, not promoted because the architecture sounds persuasive.
 
 # Package map
@@ -381,4 +395,4 @@ The six-role code chain and structural source-withholding rule are experimental 
 | `prompts/07_CONTROL_REFACTOR.md` | Conventional-refactor control condition |
 | `prompts/08_TRIAL_ADJUDICATOR.md` | Final comparison and result summary |
 | `templates/` | Records and handoffs |
-| `toy_trial/` | Disposable runnable experiment |
+| `toy_trial/` | Disposable procedural demonstration |

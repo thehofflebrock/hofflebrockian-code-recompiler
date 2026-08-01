@@ -1,4 +1,4 @@
-name: Toy baseline
+name: Package checks
 
 on:
   push:
@@ -9,14 +9,14 @@ permissions:
   contents: read
 
 jobs:
-  baseline:
+  package:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: Show Python version
         run: python3 --version
-      - name: Run the 11 visible baseline tests
+      - name: Run the 11 visible toy tests
         env:
           ORDER_QUOTE_MODULE_PATH: toy_trial/legacy/order_quote.py
         run: python3 -m unittest discover -s toy_trial/visible_tests -p 'test_*.py' -v

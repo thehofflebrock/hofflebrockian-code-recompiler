@@ -1,47 +1,61 @@
 # Hofflebrockian Code Recompiler
 
-[![Toy baseline](https://github.com/thehofflebrock/hofflebrockian-code-recompiler/actions/workflows/tests.yml/badge.svg)](https://github.com/thehofflebrock/hofflebrockian-code-recompiler/actions/workflows/tests.yml)
+[![Package checks](https://github.com/thehofflebrock/hofflebrockian-code-recompiler/actions/workflows/tests.yml/badge.svg)](https://github.com/thehofflebrock/hofflebrockian-code-recompiler/actions/workflows/tests.yml)
 
-An independent trial kit for testing whether source-blind reconstruction can preserve software behavior while reducing total complexity.
+A procedural demonstration of contract-led software reconstruction and source-withholding.
 
-> **Status:** Experimental application protocol. This is a falsifiable hypothesis, not a proven replacement for refactoring and not permission to deploy unreviewed code.
+> **Status: superseded experimental design.** Version 0.1 does not support a reportable claim about source-blind reconstruction. No natural-code trial has yet produced evidence for or against the hypothesis. The repository remains public so the original design, its useful components, and its defects can be inspected.
 
-The method does not ask an AI to delete code, guess what belonged there, and patch until visible tests pass. It first characterizes and protects observable behavior, withholds the inherited implementation from the builder, rebuilds from an implementation-neutral contract, and audits the result against evidence the builder never saw.
+## Why v0.1 was superseded
+
+- The bundled workspace tool creates sibling directories. It does not physically deny an agent access to the legacy source or repository history. A run using it cannot substantiate a source-denial claim.
+- The toy evaluator derives expected behavior from the legacy implementation. It measures legacy parity, not independent contract correctness, and can score sediment as behavior to preserve.
+- The Auditor sees which candidate is which before assigning interpretive scores. The assessment is not blinded.
+- Both builders receive the reconstruction packet and differ chiefly in access to the legacy source. The design therefore concerns implementation anchoring inside contract-led reconstruction, not reconstruction versus conventional refactoring.
+- The toy module and its deliberate sediment were authored with the hypothesis. The toy proves that the package mechanics run; it is not evidence that the method improves natural code.
+
+The passing badge means only that the package checks complete. It is not a validation badge.
+
+## What remains useful
+
+The durable core is the discipline of characterizing before erasing, typing consequential claims as observed, documented, inferred, implementation-only, unexplained, or unknown, and refusing to patch around a contract gap. When the governing contract changes, correct it upstream and rebuild from blank state.
 
 `characterize -> protect -> compress -> isolate -> rederive -> falsify -> promote, recompile, reject, or retain`
 
 ## Start here
 
-If you are not a coder, use an AI coding assistant that can open a folder and run terminal commands. Begin with the bundled toy trial. Do not begin with live or production software.
+Use the bundled toy only to rehearse the procedure. Do not treat its output as experimental evidence, and do not begin with live or production software.
 
 1. Read [`START_HERE.md`](START_HERE.md), then the risk gate and source-isolation rules in [`MANUAL.md`](MANUAL.md).
 2. Use `prompts/00_FAST_PACKET.md` against the toy legacy module and visible tests.
 3. Put the resulting records into copies of the files in `templates/`.
-4. Generate structurally separate control and blind workspaces.
-5. Run the conventional refactor and source-blind rebuild in separate fresh sessions.
+4. Generate the paired sibling workspaces used by the demonstration.
+5. Run the two reconstruction conditions in separate fresh sessions.
 6. Return to an auditor session and compare both candidates against sealed evidence.
 
 The complete command-by-command route is in [`START_HERE.md`](START_HERE.md).
 
-## Primary hypothesis
+## Original research question
 
-The trial supports the method only when the blind candidate:
+Version 0.1 was built to ask whether a source-denied candidate could:
 
-1. preserves required behavior on evidence withheld from its builder;
-2. introduces no security, performance, compatibility, side-effect, or operational regression; and
-3. reduces total complexity or corrective burden relative to both the legacy implementation and a conventional-refactor control.
+1. preserve required behavior on evidence withheld from its builder;
+2. introduce no security, performance, compatibility, side-effect, or operational regression; and
+3. reduce total complexity or corrective burden relative to both the legacy implementation and a conventional-refactor control.
 
 Moving complexity into dependencies, wrappers, configuration, or corrective patches does not count as simplification.
 
+The current package does not answer that question. Its isolation, oracle, and assessment design are insufficient for a reportable comparison.
+
 ## Repository contents
 
-- `MANUAL.md`: the full independent-use protocol and A/B experiment design.
+- `MANUAL.md`: the original protocol, its operating details, and the supersession notice.
 - `prompts/`: the fast packet, six role prompts, conventional-refactor control, and trial adjudicator.
 - `templates/`: eight handoff and evidence records.
-- `toy_trial/`: a dependency-free Python example, 11 visible tests, a sealed evaluator, and workspace-isolation tooling.
+- `toy_trial/`: a dependency-free Python procedural example, 11 visible tests, a legacy-parity evaluator, and a sibling-workspace generator.
 - `START_HERE.md`: the shortest independent route through the kit.
 
-The [`v0.1 release`](https://github.com/thehofflebrock/hofflebrockian-code-recompiler/releases/tag/v0.1) includes the formatted DOCX manual and a complete downloadable trial kit.
+The [`v0.1 release`](https://github.com/thehofflebrock/hofflebrockian-code-recompiler/releases/tag/v0.1) preserves the original formatted manual and downloadable kit as superseded artifacts.
 
 ## Do not use an initial trial on
 
